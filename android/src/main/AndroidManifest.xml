@@ -1,2 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_TYPE_HEALTH" />
+
+    <application>
+        <service android:name=".ForegroundservicePlugin$ForegroundService"
+                android:foregroundServiceType="location" />
+    </application>
+
+
 </manifest>
