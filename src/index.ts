@@ -1,5 +1,4 @@
 import { registerPlugin } from '@capacitor/core';
-
 import type { ForegroundservicePlugin } from './definitions';
 
 const Foregroundservice = registerPlugin<ForegroundservicePlugin>('Foregroundservice', {
@@ -7,4 +6,4 @@ const Foregroundservice = registerPlugin<ForegroundservicePlugin>('Foregroundser
 });
 
 export * from './definitions';
-export { Foregroundservice };
+export { Foregroundservice }; // Instanz des Plugins

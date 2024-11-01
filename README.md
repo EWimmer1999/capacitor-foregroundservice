@@ -13,19 +13,42 @@ npx cap sync
 
 <docgen-index>
 
-* [`startService()`](#startservice)
+* [`echo(...)`](#echo)
+* [`startService(...)`](#startservice)
 * [`stopService()`](#stopservice)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### startService()
+### echo(...)
 
 ```typescript
-startService() => Promise<void>
+echo(options: { value: string; }) => Promise<{ value: string; }>
 ```
+
+| Param         | Type                            |
+| ------------- | ------------------------------- |
+| **`options`** | <code>{ value: string; }</code> |
+
+**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+
+--------------------
+
+
+### startService(...)
+
+```typescript
+startService(options: StartServiceOptions) => Promise<{ title: string; }>
+```
+
+| Param         | Type                                                                |
+| ------------- | ------------------------------------------------------------------- |
+| **`options`** | <code><a href="#startserviceoptions">StartServiceOptions</a></code> |
+
+**Returns:** <code>Promise&lt;{ title: string; }&gt;</code>
 
 --------------------
 
@@ -33,9 +56,25 @@ startService() => Promise<void>
 ### stopService()
 
 ```typescript
-stopService() => Promise<void>
+stopService() => Promise<{ value: string; }>
 ```
 
+**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+
 --------------------
+
+
+### Interfaces
+
+
+#### StartServiceOptions
+
+| Prop                 | Type                |
+| -------------------- | ------------------- |
+| **`title`**          | <code>string</code> |
+| **`description`**    | <code>string</code> |
+| **`icon`**           | <code>string</code> |
+| **`importance`**     | <code>number</code> |
+| **`notificationId`** | <code>number</code> |
 
 </docgen-api>
